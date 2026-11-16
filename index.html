@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            height: 10vh;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 1px solid black; */
+        }
+        .menu{
+            display:flex;
+            align-items:center;
+            gap:6px;
+        }
+        .menu a{
+            text-decoration: none;
+            padding:9px 18px;
+            border-radius:99px;
+            font-weight:500;
+            font-size:.95rem;
+            color: black;
+        }
+        .menu a:hover{
+            background: rgba(185, 174, 174,.2);
+        }
+        .menu a.active{
+            background:navy;
+            color:white;
+        }
+        .hero{
+            height:90vh;
+            border-top: 1px solid black;
+            /* background: beige; */
+            /* padding: clamp(48px,8vw,96px); */
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            background-image: radial-gradient(circle at 1px 1px ,rgba(30,64,216,.18)3px,transparent 0);
+            background-size: 28px 28px;
+
+        }
+        .left{
+            height: 100%;
+            width: 50%;
+            /* border: 1px solid black; */
+        }
+        .right{
+            height: 100%;
+            width: 50%;
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .oval{
+            height: 80%;
+            width: 50%;
+            border-radius: 50%;
+            border: 2px dashed black;
+            position: absolute;
+            animation: oval 10s infinite linear;
+        }
+        @keyframes oval {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .circle{
+            height: 30%;
+            width: 30%;
+            /* aspect-ratio: 1 / 1; */
+            border-radius: 50%;
+            background: orange;
+            position: absolute;
+            top: 10%;
+            right: 22%;
+        }
+        .mirror{
+            height: 70%;
+            width: 45%;
+            z-index: 5;
+            border-radius: 50% 50% 0 0;
+            border: 10px solid white;
+            overflow: hidden;
+        }
+        .mirror img{
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .about{
+            height: 100vh;
+            border: 1px solid black;
+        }
+        /* .assignments{
+            text-align: center;
+            height: 7vh;
+            line-height: 1.6;
+        }
+        .con{
+            height: 93vh;
+            display: flex;
+        }
+        .btn{
+            height: 100%;
+            width: 25%;
+            border: 1px solid black;
+            display: flex;
+            flex-diassignment-cardtion: column;
+            align-items: center;
+            justify-content: space-around;    
+            overflow-y: auto;
+        }
+        .view{
+            height: 100%;
+            width: 75%;
+            border: 1px solid black;
+        }
+        .btn a{
+            width: 90%;
+            text-decoration: none;
+            flex: 0 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 99px;
+            background: navy;
+            color: white;
+            font-size: clamp(.4rem,2vw,1rem);
+        }
+        @media (max-width:600px) {
+            .con{
+                flex-diassignment-cardtion: column;
+            }
+            .btn{
+                width: 100%;
+                height: 20%;
+                flex-diassignment-cardtion: row;
+                gap: 3%;
+            }
+            .btn a{
+                flex: 0 0 40px;
+                padding: 10px 20px;
+                white-space: nowrap;
+            }
+            .view{
+                width: 100%;
+            }
+        } */
+        .skills{
+            height: 100vh;
+            border: 1px solid black;
+            /* background: yellowgreen; */
+        }
+        .cards{
+            height: 85%;
+            width: 80%;
+            border: 1px solid black;
+            margin: 3% auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4%;
+            flex-wrap: wrap;
+        }
+        .card{
+            height: 30%;
+            width: 30%;
+            border: 1px solid black;
+            border-radius: 30px 30px 30px 10px;
+        }
+        .assignments{
+            height: 150vh;
+            /* background: black; */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+            padding: 80px;
+            /* display: grid;
+            grid-template-columns: repeat(3,1fr);
+            place-items: center; */
+
+        }
+        .assignment-card{
+            height: 450px;
+            max-height: 100%;
+            min-height: 200px;
+            width: 340px;
+            max-width: 100%;
+            min-height: 320px;
+            border: 1px solid black;
+
+        }
+        .top{
+            position: relative;
+             height: 25%; background-color: blue;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, .3) 0 5px, transparent 6px),
+    radial-gradient(circle, rgba(255, 255, 255, .15) 0 9px, transparent 10px);
+  background-size: 30px 30px; background-position: 0 0, 15px 15px;
+  transition: background-position 1s cubic-bezier(.2, .8, .2, 1);
+        }
+        .assignment-card:hover .top{
+            background-position: 30px 30px, 45px 45px;
+        }
+        .top:hover{
+            transition: ease-in-out .8s;
+        }
+        .bottom{
+            height: 75%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sahil Mohammad</h1>
+        <nav class="menu">
+            <a href="" class="active">Home</a>
+            <a href="">About</a>
+            <a href="">Assignments</a>
+            <a href="">Skills</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="left">
+            <h2>Sahil Mohammad</h2>
+            <h3>Bca 1st Sem</h3>
+        </div>
+        <div class="right">
+            <div class="oval"></div>
+            <div class="circle"></div>
+            <div class="mirror">
+                <img src="D:\Sahil\Assignment-1\pic.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="about"></section>
+    <!-- <section class="assignment">
+        <h1 class="assignments">Assignments</h1>
+        <div class="con">
+            <div class="btn">
+                <a href="D:\Sahil\Assignment-1\index.html" target="sahil">Assignment-1</a>
+                <a href="D:\Sahil\Assignment-2\index.html" target="sahil">Assignment-2</a>
+                <a href="D:\Sahil\Assignment-3\index.html" target="sahil">Assignment-3</a>
+                <a href="D:\Sahil\Assignment-4\index.html" target="sahil">Assignment-4</a>
+                <a href="D:\Sahil\Assignment-5\index.html" target="sahil">Assignment-5</a>
+                <a href="D:\Sahil\Assignment-6\index.html" target="sahil">Assignment-6</a>
+                <a href="D:\Sahil\Assignment-7\index.html" target="sahil">Assignment-7</a>
+                <a href="D:\Sahil\Assignment-8\index.html" target="sahil">Assignment-8</a>
+                <a href="D:\Sahil\Assignment-9\index.html" target="sahil">Assignment-9</a>
+                <a href="D:\Sahil\Assignment-10\index.html" target="sahil">Assignment-10</a>
+                <a href="D:\Sahil\Assignment-11\index.html" target="sahil">Assignment-11</a>
+            </div>
+            <iframe src="sub file/images/capture.JPG" frameborder="0" class="view" name="sahil"></iframe>
+        </div>
+    </section> -->
+    <section class="skills">
+        <h1>My Skills</h1>
+        <div class="cards">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </section>
+    <section class="assignments">
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+            <div class="assignment-card"></div>
+            <div class="assignment-card"></div>
+            <div class="assignment-card"></div>
+            <div class="assignment-card"></div>
+            <div class="assignment-card"></div>
+    </section>
+</body>
+</html>
