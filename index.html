@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
     <style>
+        :root {
+            --paper: #F4F7FF;
+            --white: #FFFFFF;
+            --ink:   #0E1B4D;
+            --muted: #4A5578;
+            --cobalt:#1E40D8;
+            --turquoise:#0E9F9A;
+            --marigold: #FFB627;
+            --display: 'Bricolage Grotesque', system-ui, sans-serif;
+            --body: 'Figtree', system-ui, sans-serif;
+            --ease: cubic-bezier(.2, .8, .2, 1);
+        }
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        body {
+            font-family: var(--body);
+            background: var(--paper);
+            color: var(--ink);
         }
         header{
             height: 10vh;
@@ -57,8 +71,48 @@
         .left{
             height: 100%;
             width: 50%;
+            min-width: 800px;
             /* border: 1px solid black; */
+            padding: clamp(0px,8vw,100px);
+            padding-left: clamp(0px,9vw,180px);
         }
+        .college{
+            display: inline-flex;
+            gap: 10px;
+            background: white;
+            /* width: 55%; */
+            padding: 15px;
+            /* margin: 20px; */
+            border-radius: 99px;
+            font-size: .9rem;
+            font-weight: 600;
+            border: 1px solid rgba(14, 27, 77, .5);
+        }
+        .name{
+            max-width: 30%;
+            font-family: var(--display);
+            font-size: clamp(50px,7vw,150px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-top: 20px;
+        }
+        .batch{
+            font-family: var(--display); font-weight: 700;
+            font-size: clamp(1.3rem, 5vw, 1.8rem); color: var(--cobalt);
+            display: inline-block;
+            margin: 10px 0 20px;
+        }
+        .hero .p{
+            width: 430px;
+            /* width: 75%; */
+            /* max-width: 75%; */
+            /* min-width: 70%; */
+            border: 1px solid black;
+            /* margin: 20px 0 30px; */
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        
         .right{
             height: 100%;
             width: 50%;
@@ -102,6 +156,11 @@
             border: 10px solid white;
             overflow: hidden;
         }
+        img{
+            display: block;
+            max-width: 100%;
+        }
+
         .mirror img{
             display: block;
             height: 100%;
@@ -215,12 +274,12 @@
         }
         .top{
             position: relative;
-             height: 25%; background-color: blue;
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, .3) 0 5px, transparent 6px),
-    radial-gradient(circle, rgba(255, 255, 255, .15) 0 9px, transparent 10px);
-  background-size: 30px 30px; background-position: 0 0, 15px 15px;
-  transition: background-position 1s cubic-bezier(.2, .8, .2, 1);
+            height: 25%; background-color: blue;
+            background-image:
+                radial-gradient(circle, rgba(255, 255, 255, .3) 0 5px, transparent 6px),
+                radial-gradient(circle, rgba(255, 255, 255, .15) 0 9px, transparent 10px);
+            background-size: 30px 30px; background-position: 0 0, 15px 15px;
+            transition: background-position 1s cubic-bezier(.2, .8, .2, 1);
         }
         .assignment-card:hover .top{
             background-position: 30px 30px, 45px 45px;
@@ -232,6 +291,29 @@
             height: 75%;
             border: 1px solid black;
         }
+        @media (max-width: 860px) {
+  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-photo { position: static; }
+  .arch-wrap { max-width: 320px; }
+  .chip.one { left: -4%; }
+  .chip.two { right: -4%; }
+}
+@media (max-width: 560px) {
+  .bar { padding: 8px 14px; }
+  .logo span.name { display: none; }
+  nav a { padding: 8px 10px; font-size: .88rem; }
+  .skills-grid, .assign-grid { grid-template-columns: 1fr; }
+  .hero{
+    flex-direction: column;
+  }
+  .left{
+    padding:50px 10px 10px 20px;
+  }
+  .hero .p{
+    width: 350px;
+  }
+}
+        
     </style>
 </head>
 <body>
@@ -247,14 +329,19 @@
     </header>
     <section class="hero">
         <div class="left">
-            <h2>Sahil Mohammad</h2>
-            <h3>Bca 1st Sem</h3>
+            <p class="college">
+                <i class="fas fa-graduation-cap"></i> Dezyne Ecole College, Ajmer.
+            </p>
+            <h2 class="name">Sahil Mohammad</h2>
+            <p class="batch">BCA first-year · Web Developer</p>
+            <p class="p">I’m learning to build responsive websites with HTML5 and CSS3. Browse my assignments, check my skills, and get in touch.</p>
+
         </div>
         <div class="right">
             <div class="oval"></div>
             <div class="circle"></div>
             <div class="mirror">
-                <img src="D:\Sahil\Assignment-1\pic.png" alt="">
+                <img src="pic.png" alt="">
             </div>
         </div>
     </section>
