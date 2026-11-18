@@ -4,173 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        :root {
-            --paper: #F4F7FF;
-            --white: #FFFFFF;
-            --ink:   #0E1B4D;
-            --muted: #4A5578;
-            --cobalt:#1E40D8;
-            --turquoise:#0E9F9A;
-            --marigold: #FFB627;
-            --display: 'Bricolage Grotesque', system-ui, sans-serif;
-            --body: 'Figtree', system-ui, sans-serif;
-            --ease: cubic-bezier(.2, .8, .2, 1);
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: var(--body);
-            background: var(--paper);
-            color: var(--ink);
-        }
-        header{
-            height: 10vh;
-            width: 80%;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* border: 1px solid black; */
-        }
-        .menu{
-            display:flex;
-            align-items:center;
-            gap:6px;
-        }
-        .menu a{
-            text-decoration: none;
-            padding:9px 18px;
-            border-radius:99px;
-            font-weight:500;
-            font-size:.95rem;
-            color: black;
-        }
-        .menu a:hover{
-            background: rgba(185, 174, 174,.2);
-        }
-        .menu a.active{
-            background:navy;
-            color:white;
-        }
-        .hero{
-            height:90vh;
-            border-top: 1px solid black;
-            /* background: beige; */
-            /* padding: clamp(48px,8vw,96px); */
-            display: flex;
-            position: relative;
-            overflow: hidden;
-            background-image: radial-gradient(circle at 1px 1px ,rgba(30,64,216,.18)3px,transparent 0);
-            background-size: 28px 28px;
-
-        }
-        .left{
-            height: 100%;
-            width: 50%;
-            min-width: 800px;
-            /* border: 1px solid black; */
-            padding: clamp(0px,8vw,100px);
-            padding-left: clamp(0px,9vw,180px);
-        }
-        .college{
-            display: inline-flex;
-            gap: 10px;
-            background: white;
-            /* width: 55%; */
-            padding: 15px;
-            /* margin: 20px; */
-            border-radius: 99px;
-            font-size: .9rem;
-            font-weight: 600;
-            border: 1px solid rgba(14, 27, 77, .5);
-        }
-        .name{
-            max-width: 30%;
-            font-family: var(--display);
-            font-size: clamp(50px,7vw,150px);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-top: 20px;
-        }
-        .batch{
-            font-family: var(--display); font-weight: 700;
-            font-size: clamp(1.3rem, 5vw, 1.8rem); color: var(--cobalt);
-            display: inline-block;
-            margin: 10px 0 20px;
-        }
-        .hero .p{
-            width: 430px;
-            /* width: 75%; */
-            /* max-width: 75%; */
-            /* min-width: 70%; */
-            border: 1px solid black;
-            /* margin: 20px 0 30px; */
-            color: var(--muted);
-            font-size: 1.1rem;
-        }
-        
-        .right{
-            height: 100%;
-            width: 50%;
-            /* border: 1px solid black; */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .oval{
-            height: 80%;
-            width: 50%;
-            border-radius: 50%;
-            border: 2px dashed black;
-            position: absolute;
-            animation: oval 10s infinite linear;
-        }
-        @keyframes oval {
-            0%{
-                transform: rotate(0deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }
-        }
-        .circle{
-            height: 30%;
-            width: 30%;
-            /* aspect-ratio: 1 / 1; */
-            border-radius: 50%;
-            background: orange;
-            position: absolute;
-            top: 10%;
-            right: 22%;
-        }
-        .mirror{
-            height: 70%;
-            width: 45%;
-            z-index: 5;
-            border-radius: 50% 50% 0 0;
-            border: 10px solid white;
-            overflow: hidden;
-        }
-        img{
-            display: block;
-            max-width: 100%;
-        }
-
-        .mirror img{
-            display: block;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-        .about{
-            height: 100vh;
-            border: 1px solid black;
-        }
         /* .assignments{
             text-align: center;
             height: 7vh;
@@ -318,7 +153,9 @@
 </head>
 <body>
     <header>
-        <h1>Sahil Mohammad</h1>
+        <a href="" class="logo">
+            <span class="dot"></span><span>Sahil Mohammad</span>
+        </a>
         <nav class="menu">
             <a href="" class="active">Home</a>
             <a href="">About</a>
@@ -330,12 +167,22 @@
     <section class="hero">
         <div class="left">
             <p class="college">
-                <i class="fas fa-graduation-cap"></i> Dezyne Ecole College, Ajmer.
+                <i class="fas fa-graduation-cap"></i> Dezyne Ecole College, Ajmer
             </p>
             <h2 class="name">Sahil Mohammad</h2>
             <p class="batch">BCA first-year · Web Developer</p>
             <p class="p">I’m learning to build responsive websites with HTML5 and CSS3. Browse my assignments, check my skills, and get in touch.</p>
-
+            <div class="btns">
+                <a class="as" href=""><i class="fas fa-folder-open"></i> View assignments</a>
+                <a class="white" href=""><i class="fas fa-envelope"></i> Contact me</a>
+            </div>
+             <div class="icons">
+                <a href="tel:+919660432565"><i class="fas fa-phone"></i></a>
+                <a href="https://wa.me/919660432565"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:sahilhere6767@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
         <div class="right">
             <div class="oval"></div>
@@ -345,7 +192,43 @@
             </div>
         </div>
     </section>
-    <section class="about"></section>
+    <marquee behavior="" direction="right" class="marq">
+        <span>Git &amp; Github <i class="i">....</i> <i class="i">....</i></span>
+        <span>Flexbox &amp; Grid <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>JavaScript <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>Responsive Desgin <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>CSS3 <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>HTML5 <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>Git &amp; Github <i class="i">....</i> <i class="i">....</i></span>
+        <span>Flexbox &amp; Grid <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>JavaScript <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>Responsive Desgin <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>CSS3 <i class="i">....</i> ✦ <i class="i">....</i></span>
+        <span>HTML5 <i class="i">....</i> <i class="i">....</i></span>
+    </marquee>
+    <section class="about">
+        <div class="inner">
+            <div class="about-left">
+                <div class="mirror2"></div>
+            </div>
+            <div class="about-right">
+                <h1>Learning to build for the web</h1>
+                <p>Hello! I’m <b>Sahil Mohammad</b>, a first-year BCA student at Dezyne École Collège. I’m passionate about web development and have been learning HTML5 and CSS3 to build modern, responsive websites.</p>
+                <div class="aboutme">
+                    <h3>About my college</h3>
+                    <p>Dezyne École Collège is a premier institution known for its quality education in computer science and information technology. The curriculum focuses on practical, industry-relevant skills combined with strong theoretical foundations.</p>
+                </div>
+                <div class="path">
+                    <h3>My learning path</h3>
+                    <li>Completed HTML & CSS fundamentals (30-class curriculum)</li>
+                    <li>Building responsive web layouts with Flexbox</li>
+                    <li>Creating interactive forms and animations</li>
+                    <li>Learning web hosting and deployment</li>
+                </div>
+                <p>Throughout, I focus on modern web design best practices.</p>
+            </div>
+        </div>
+    </section>
     <!-- <section class="assignment">
         <h1 class="assignments">Assignments</h1>
         <div class="con">
