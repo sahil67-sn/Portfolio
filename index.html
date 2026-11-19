@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-7.3.1-web/fontawesome-free-7.3.1-web/css/all.min.css">
     <style>
         /* .assignments{
@@ -167,7 +168,9 @@
     <section class="about">
         <div class="inner">
             <div class="about-left">
-                <div class="mirror2"></div>
+                <div class="mirror2">
+                    <img src="pic.png" alt="">
+                </div>
             </div>
             <div class="about-right">
                 <h1>Learning to build for the web</h1>
@@ -269,77 +272,152 @@
             </div>
         </div>
     </section>
-    <section class="assignments">
+    <section class="assignments" id="assignments">
         <div class="myy">
             <h1>My Assignments</h1>
             <p>Key assignments and projects from the HTML & CSS curriculum.</p>
         </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>HTML Basics</h2>
-                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+        <div class="assignment-card">
+            <div class="top"></div>
+            <div class="bottom">
+                <h2>HTML Basics</h2>
+                <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                <ul>
                     <li>Used proper document structure</li>
                     <li>Implemented all heading levels</li>
                     <li>Created meaningful lists and content</li>
                     <li>Added internal and external links</li>
-                </div>
+                </ul>
             </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>CSS Styling</h2>
-                    <p><b>Task: </b>Apply professional CSS styling to a web page.</p>
-                    <li>Used proper document structure</li>
-                    <li>Implemented all heading levels</li>
-                    <li>Created meaningful lists and content</li>
-                    <li>Added internal and external links</li>
-                </div>
+        </div>
+        <div class="assignment-card">
+            <div class="top" style="background-color: var(--turquoise);"></div>
+            <div class="bottom">
+                <h2>CSS Styling</h2>
+                <p><b>Task: </b>Apply professional CSS styling to a web page.</p>
+                <ul>
+                    <li>Used external CSS stylesheet</li>
+                    <li>Applied colors and typography</li>
+                    <li>Created hover effects and transitions</li>
+                    <li>Implemented CSS box model properties</li>
+                </ul>
             </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>HTML Basics</h2>
-                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
-                    <li>Used proper document structure</li>
-                    <li>Implemented all heading levels</li>
-                    <li>Created meaningful lists and content</li>
-                    <li>Added internal and external links</li>
-                </div>
+        </div>
+        <div class="assignment-card">
+            <div class="top" style="background-color: var(--marigold);"></div>
+            <div class="bottom">
+                <h2>Image Gallery</h2>
+                <p><b>Task: </b>Create a responsive image gallery with CSS effects.</p>
+                <ul>
+                    <li>Built column-wise grid layout</li>
+                    <li>Added border-radius and shadow effects</li>
+                    <li>Implemented zoom on hover animation</li>
+                    <li>Made it fully responsive</li>
+                </ul>
             </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>HTML Basics</h2>
-                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
-                    <li>Used proper document structure</li>
-                    <li>Implemented all heading levels</li>
-                    <li>Created meaningful lists and content</li>
-                    <li>Added internal and external links</li>
-                </div>
+        </div>
+        <div class="assignment-card">
+            <div class="top" style="background-color: var(--ink);"></div>
+            <div class="bottom">
+                <h2>Responsive Design</h2>
+                <p><b>Task: </b>Build a mobile-first responsive website.</p>
+                <ul>
+                    <li>Used media queries for breakpoints</li>
+                    <li>Flexbox for flexible layouts</li>
+                    <li>Tested on multiple screen sizes</li>
+                    <li>Optimized for mobile and desktop</li>
+                </ul>
             </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>HTML Basics</h2>
-                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
-                    <li>Used proper document structure</li>
-                    <li>Implemented all heading levels</li>
-                    <li>Created meaningful lists and content</li>
-                    <li>Added internal and external links</li>
-                </div>
+        </div>
+        <div class="assignment-card">
+            <div class="top"></div>
+            <div class="bottom">
+                <h2>HTML Forms</h2>
+                <p><b>Task: </b>Create and style an interactive form.</p>
+                <ul>
+                    <li>Used all input types (text, email, tel)</li>
+                    <li>Applied form validation styling</li>
+                    <li>Created focus and hover effects</li>
+                    <li>Styled buttons with animations</li>
+                </ul>
             </div>
-            <div class="assignment-card">
-                <div class="top"></div>
-                <div class="bottom">
-                    <h2>HTML Basics</h2>
-                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
-                    <li>Used proper document structure</li>
-                    <li>Implemented all heading levels</li>
-                    <li>Created meaningful lists and content</li>
-                    <li>Added internal and external links</li>
-                </div>
+        </div>
+        <div class="assignment-card">
+            <div class="top" style="background-color: var(--turquoise);"></div>
+            <div class="bottom">
+                <h2>Media & Animation</h2>
+                <p><b>Task: </b>Embed media and create CSS animations.</p>
+                <ul>
+                    <li>Embedded audio and video elements</li>
+                    <li>Created keyframe animations</li>
+                    <li>Used transition and transform effects</li>
+                    <li>Built loading spinner animation</li>
+                </ul>
             </div>
+        </div>
     </section>
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="banner">
+                <div>
+                    <h1>Contact me</h1>
+                    <p>Based in Rajasthan. Call, message, or send a note.</p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact information</h3>
+                    <ul class="info">
+                        <li>
+                            <span class="ico"><i class="fas fa-phone"></i></span>
+                            <div><small>Phone</small><a href="tel:+919660432565">+91 96604 32565</a></div>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-envelope"></i></span>
+                            <div><small>Email</small><a href="mailto:sahilhere6767@gmail.com">sahilhere6767@gmail.com</a></div>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fab fa-whatsapp"></i></span>
+                            <div><small>WhatsApp</small><a href="https://wa.me/919660432565">Message on WhatsApp</a></div>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-map-marker-alt"></i></span>
+                            <div><small>Address</small><b>Ajmer, Rajasthan, India</b></div>
+                        </li>
+                        <li>
+                            <span class="ico"><i class="fas fa-graduation-cap"></i></span>
+                            <div><small>College</small><b>Dezyne École Collège, Ajmer</b></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="form" action="mailto:sahilhere6767@gmail.com" method="post" enctype="text/plain">
+                    <h3>Send me a message</h3>
+                    <div class="field">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" name="Name" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="Subject" placeholder="What is this about?" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" placeholder="Type your message here" required></textarea>
+                    </div>
+                    <button class="send" type="submit"><i class="fas fa-paper-plane"></i> Send message</button>
+                    <p class="hint">Sending opens your email app with this message ready to go.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Sahil Mohammad | Student Portfolio | Dezyne École Collège</p>
+        <p>BCA First Year | HTML5 & CSS3 Assignment Project</p>
+    </footer>
 </body>
 </html>
