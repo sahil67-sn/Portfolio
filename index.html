@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-7.3.1-web/fontawesome-free-7.3.1-web/css/all.min.css">
     <style>
         /* .assignments{
             text-align: center;
@@ -80,49 +81,7 @@
             border: 1px solid black;
             border-radius: 30px 30px 30px 10px;
         } */
-        .assignments{
-            height: 150vh;
-            /* background: black; */
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 5%;
-            padding: 80px;
-            /* display: grid;
-            grid-template-columns: repeat(3,1fr);
-            place-items: center; */
-
-        }
-        .assignment-card{
-            height: 450px;
-            max-height: 100%;
-            min-height: 200px;
-            width: 340px;
-            max-width: 100%;
-            min-height: 320px;
-            border: 1px solid black;
-
-        }
-        .top{
-            position: relative;
-            height: 25%; background-color: blue;
-            background-image:
-                radial-gradient(circle, rgba(255, 255, 255, .3) 0 5px, transparent 6px),
-                radial-gradient(circle, rgba(255, 255, 255, .15) 0 9px, transparent 10px);
-            background-size: 30px 30px; background-position: 0 0, 15px 15px;
-            transition: background-position 1s cubic-bezier(.2, .8, .2, 1);
-        }
-        .assignment-card:hover .top{
-            background-position: 30px 30px, 45px 45px;
-        }
-        .top:hover{
-            transition: ease-in-out .8s;
-        }
-        .bottom{
-            height: 75%;
-            border: 1px solid black;
-        }
+        
         @media (max-width: 860px) {
   .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
   .about-photo { position: static; }
@@ -164,7 +123,7 @@
     <section class="hero">
         <div class="left">
             <p class="college">
-                <i class="fas fa-graduation-cap"></i> Dezyne Ecole College, Ajmer
+                <i class="fas fa-graduation-cap" style="color: var(--cobalt);"></i> Dezyne Ecole College, Ajmer
             </p>
             <h2 class="name">Sahil Mohammad</h2>
             <p class="batch">BCA first-year · Web Developer</p>
@@ -185,6 +144,8 @@
             <div class="oval"></div>
             <div class="circle"></div>
             <div class="mirror">
+                <div class="html"><i class="fab fa-html5 fa-2x"><p>HTML5</p></i></div>
+                <div class="css"><i class="fab fa-css3 fa-2x"><p>CSS3</p></i></div>
                 <img src="pic.png" alt="">
             </div>
         </div>
@@ -252,7 +213,7 @@
             <div class="cards">
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fab fa-html5 fa-2x" style="color:rgba(255, 68, 0, 0.966)"></i></div>
                         <div class="tr"><h3>HTML5</h3><span>Expert Level</span></div>
                     </div>
                     <div class="card-bottom">
@@ -261,7 +222,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fab fa-css3-alt fa-2x" style="color:#5B93FF"></i></div>
                         <div class="tr"><h3>CSS3</h3><span>Advanced Level</span></div>
                     </div>
                     <div class="card-bottom">
@@ -270,7 +231,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fab fa-js fa-2x" style="color:gold"></i></div>
                         <div class="tr"><h3>JavaScript</h3><span>Intermediate</span></div>
                     </div>
                     <div class="card-bottom">
@@ -279,7 +240,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fas fa-mobile-alt fa-2x" style="color:turquoise"></i></div>
                         <div class="tr"><h3>Responsive Design</h3><span>Advanced</span></div>
                     </div>
                     <div class="card-bottom">
@@ -288,7 +249,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fas fa-layer-group fa-2x" style="color:var(--marigold)"></i></div>
                         <div class="tr"><h3>Flexbox & Grid</h3><span>Advanced</span></div>
                     </div>
                     <div class="card-bottom">
@@ -297,7 +258,7 @@
                 </div>
                 <div class="card">
                     <div class="card-top">
-                        <div class="tl"><i>icon</i></div>
+                        <div class="tl"><i class="fab fa-github fa-2x" style="color:white"></i></div>
                         <div class="tr"><h3>Git & Github</h3><span>Intermediate</span></div>
                     </div>
                     <div class="card-bottom">
@@ -309,15 +270,76 @@
         </div>
     </section>
     <section class="assignments">
+        <div class="myy">
+            <h1>My Assignments</h1>
+            <p>Key assignments and projects from the HTML & CSS curriculum.</p>
+        </div>
             <div class="assignment-card">
                 <div class="top"></div>
-                <div class="bottom"></div>
+                <div class="bottom">
+                    <h2>HTML Basics</h2>
+                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
             </div>
-            <div class="assignment-card"></div>
-            <div class="assignment-card"></div>
-            <div class="assignment-card"></div>
-            <div class="assignment-card"></div>
-            <div class="assignment-card"></div>
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom">
+                    <h2>CSS Styling</h2>
+                    <p><b>Task: </b>Apply professional CSS styling to a web page.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom">
+                    <h2>HTML Basics</h2>
+                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom">
+                    <h2>HTML Basics</h2>
+                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom">
+                    <h2>HTML Basics</h2>
+                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="top"></div>
+                <div class="bottom">
+                    <h2>HTML Basics</h2>
+                    <p><b>Task: </b>Create a structured web page using semantic HTML5 tags.</p>
+                    <li>Used proper document structure</li>
+                    <li>Implemented all heading levels</li>
+                    <li>Created meaningful lists and content</li>
+                    <li>Added internal and external links</li>
+                </div>
+            </div>
     </section>
 </body>
 </html>

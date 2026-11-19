@@ -20,6 +20,9 @@ body{
     background: var(--paper);
     color: var(--ink);
 }
+.html{
+    scroll-behavior: smooth;
+}
 header{
     height: 8vh;
     width: 100%;
@@ -107,6 +110,7 @@ header{
     font-size: .9rem;
     font-weight: 600;
     border: 1px solid rgba(211, 211, 211, 0.595);
+    align-items: center;
 }
 .name{
     max-width: 30%;
@@ -124,11 +128,6 @@ header{
 }
 .hero .p{
     width: 430px;
-            /* width: 75%; */
-            /* max-width: 75%; */
-            /* min-width: 70%; */
-            /* border: 1px solid black; */
-            /* margin: 20px 0 30px; */
     color: var(--muted);
     font-size: 1.1rem;
 }
@@ -143,10 +142,10 @@ header{
     position: relative;
 }
 .oval{
-    height: 80%;
+    height: 85%;
     width: 65%;
     border-radius: 50%;
-    border: 2px dashed var(--muted);
+    border: 2px dashed gray;
     position: absolute;
     animation: oval 20s infinite linear;
 }
@@ -173,9 +172,83 @@ header{
     width: 56%;
     z-index: 5;
     border-radius: 50% 50% 0 0;
-    border: 10px solid white;
-    overflow: hidden;
+    border: 8px solid white;
+    /* overflow: hidden; */
+    box-shadow: 2px 2px 20px black;
+    position: relative;
 }
+.html{
+    height: 8%;
+    width: 30%;
+    border-radius: 10px 10px;
+    background: white;
+    position: absolute;
+    z-index: 100;
+    top: 30%;
+    left: -10%;
+    display: flex;align-items: center;justify-content: space-around;
+    color: orangered;
+    animation: anima 5s infinite ease-in-out;
+}
+@keyframes anima{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.html>i{
+    width: 90%;
+    display: flex;align-items: center;justify-content: space-evenly;
+    gap: 5%;
+}
+.html>i>p{
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: system-ui, sans-serif;
+}
+.css{
+    height: 8%;
+    width: 30%;
+    border-radius: 10px 10px;
+    background: white;
+    position: absolute;
+    z-index: 100;
+    bottom: 30%;
+    right: -15%;
+    display: flex;align-items: center;justify-content: space-around;
+    /* color: orangered; */
+    color: var(--cobalt);
+    animation: animaa 5s infinite ease-in-out;
+}
+@keyframes animaa{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.css>i{
+    width: 90%;
+    display: flex;align-items: center;justify-content: space-evenly;
+    gap: 5%;
+}
+.css>i>p{
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: system-ui, sans-serif;
+}
+
 img{
     display: block;
     max-width: 100%;
@@ -185,6 +258,8 @@ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border-radius: 50% 50% 0 0;
+
 }
 .btns{
     /* width: 60%; */
@@ -193,30 +268,62 @@ img{
     align-items: center;
     /* justify-content: space-evenly; */
     gap: 5%;
-    margin: 4%;
+    margin: 4% 0 0 -1%;
 }
 .btns>a{
     text-decoration: none;
     font-weight: 700;
+    align-items: center;
 }
 .as{
     color: white;
     background: var(--ink);
-    padding: 15px 30px;
+    padding: 14px 30px 15px 30px;
     border-radius: 99px;
     border: 1px solid rgba(211, 211, 211, 0.595);
-    
+    /* transition: var(--ease); */
+}
+.as:hover{
+    background: var(--cobalt);
+    transform: translate(0,-2px);
 }
 .white{
     background: var(--white);
     color: var(--ink);
-    padding: 15px 30px;
+    padding: 14px 30px 15px 30px;
     border-radius: 99px;
     border: 1px solid var(--ink);
+    /* transition: var(--ease); */
+}
+.white:hover{
+    background: var(--marigold);
+    border: none;
+    transform: translate(0,-2px);
+    /* box-shadow: 1 10px 10px var(--marigold); */
 }
 .icons{
-    border: 1px solid black;
+    display: flex;
+    gap: 10px;
+    margin-top: 28px;
 }
+.icons a{
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid rgba(14, 27, 77, .12);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--ink);
+}
+.icons a:hover{
+    background: var(--cobalt);
+    color: #fff;
+    transform: translateY(-5px) rotate(-8deg);
+}
+
 
 @keyframes pulse{
     0%,100%{
@@ -330,14 +437,14 @@ img{
     font-size: 1.1rem;
 }
 .skills{
-    height: 120vh;
+    height: 90vh;
     /* border: 1px solid black; */
     background: var(--ink);
     /* display: flex;align-items: center;justify-content: center; */
     overflow: hidden;
 }
 .skills-box{
-    height: 90%;
+    height: 100%;
     width: 100%;
     padding: 80px;
 
@@ -353,12 +460,14 @@ img{
     font-weight: 500;
 }
 .cards{
-    height: 75%;
-    width: 100%;
+    height: 80%;
+    width: 90%;
     /* background: white; */
+    margin: auto;
     /* display: grid; */
     /* grid-template-columns: repeat(3,1fr); */
-    display: flex;align-items: center;justify-content: space-evenly;flex-wrap: wrap;gap: 5%;
+    gap: 1%;
+    display: flex;align-items: center;justify-content: space-between;flex-wrap: wrap;
     padding-top: 70px;
     position: relative;
 }
@@ -366,11 +475,20 @@ img{
     /* overflow: hidden; */
     height: 150px;
     width: 370px;
+    min-width: 300px;
     /* background: black; */
     border: 1px solid rgba(225, 219, 219, 0.3);
     border-radius: 30px 30px 30px 10px;
     overflow: hidden;
     background: rgba(68, 68, 126, 0.292);
+    transition: var(--ease);
+}
+.card:hover{
+    transform: translate(0,-5px);
+    border: 1px solid var(--marigold);
+}
+.card:hover .tl{
+    transform: scale(1.2) rotate(8deg);
 }
 .card-top,.card-bottom{
     height: 50%;
@@ -379,8 +497,9 @@ img{
     display: flex;
 }
 .tl{
-    height: 100%;
+    height: 145%;
     width: 20%;
+    display: flex;align-items: center;justify-content: center;
     /* background: white; */
 }
 .tr{
@@ -388,6 +507,11 @@ img{
     width: 80%;
     /* background: blue; */
     padding: 30px 0 0 0  ;
+}
+.tr>span{
+    color: rgba(192, 191, 191, 0.708);
+    font-weight: 500;
+    font-size: .9rem;
 }
 .card-bottom{
     align-items: center;
@@ -407,6 +531,9 @@ img{
     background: linear-gradient(90deg,rgba(0, 128, 0, 0.597),rgba(255, 255, 0, 0.715));
     border-radius: 30px;
 }
+.card-bottom>b{
+    color: #fff;
+}
 .ani{
     position: absolute;
     top: -350px;
@@ -416,5 +543,77 @@ img{
     aspect-ratio: 1/1;
     border-radius: 50%;
     border: 2px dashed var(--marigold);
-    animation: oval 3s infinite linear;
+    animation: ovall 70s infinite linear;
+}
+@keyframes ovall {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.assignments{
+            height: 110vh;
+            /* background: black; */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 5%;
+            padding: 80px;
+            /* display: grid;
+            grid-template-columns: repeat(3,1fr);
+            place-items: center; */
+
+        }
+        .assignment-card{
+            height: 450px;
+            max-height: 100%;
+            min-height: 200px;
+            width: 340px;
+            max-width: 100%;
+            min-height: 320px;
+            border: 1px solid rgba(173, 216, 230, 0.278);
+            border-radius: 30px;
+            overflow: hidden;
+            background: white;
+        }
+        .top{
+            position: relative;
+            height: 25%; background-color: blue;
+            background-image:
+                radial-gradient(circle, rgba(255, 255, 255, .3) 0 5px, transparent 6px),
+                radial-gradient(circle, rgba(255, 255, 255, .15) 0 9px, transparent 10px);
+            background-size: 30px 30px; background-position: 0 0, 15px 15px;
+            transition: background-position 1s cubic-bezier(.2, .8, .2, 1);
+        }
+        .assignment-card:hover .top{
+            background-position: 30px 30px, 45px 45px;
+        }
+        .top:hover{
+            transition: ease-in-out .8s;
+        }
+        .bottom{
+            height: 75%;
+            /* border: 1px solid black; */
+            padding: 30px;
+            line-height: 2;
+            color: var(--muted);
+        }
+        .bottom>h2,b{
+            color: var(--ink);
+        }
+        .bottom>li{
+            margin: 0 0 0 18px;
+        }
+.myy{
+    height: 15%;
+    width: 85%;
+    /* border: 1px solid black; */
+}
+.myy>h1{
+    font-weight: 900;
+    font-size: clamp(40px,3vw,100px);
+}
+.myy>p{
+    font-size: clamp(20px,1vw,50px);
+    color: var(--muted);
 }
