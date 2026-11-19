@@ -329,3 +329,92 @@ img{
     margin: 0 0 0 30px;
     font-size: 1.1rem;
 }
+.skills{
+    height: 120vh;
+    /* border: 1px solid black; */
+    background: var(--ink);
+    /* display: flex;align-items: center;justify-content: center; */
+    overflow: hidden;
+}
+.skills-box{
+    height: 90%;
+    width: 100%;
+    padding: 80px;
+
+}
+.skills-box>h1{
+    font-size: clamp(30px,4vw,80px);
+    color: white;
+    font-weight: 900;
+}
+.skills-box>p{
+    font-size: clamp(15px,1.2vw,40px);
+    color: rgba(255, 255, 255, .72);
+    font-weight: 500;
+}
+.cards{
+    height: 75%;
+    width: 100%;
+    /* background: white; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+    display: flex;align-items: center;justify-content: space-evenly;flex-wrap: wrap;gap: 5%;
+    padding-top: 70px;
+    position: relative;
+}
+.card{
+    /* overflow: hidden; */
+    height: 150px;
+    width: 370px;
+    /* background: black; */
+    border: 1px solid rgba(225, 219, 219, 0.3);
+    border-radius: 30px 30px 30px 10px;
+    overflow: hidden;
+    background: rgba(68, 68, 126, 0.292);
+}
+.card-top,.card-bottom{
+    height: 50%;
+    /* border: 1px solid black;     */
+    color: white;
+    display: flex;
+}
+.tl{
+    height: 100%;
+    width: 20%;
+    /* background: white; */
+}
+.tr{
+    height: 100%;
+    width: 80%;
+    /* background: blue; */
+    padding: 30px 0 0 0  ;
+}
+.card-bottom{
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+}
+.bar{
+    height: 15%;
+    width: 80%;
+    /* border: 1px solid rgba(173, 216, 230, 0.565); */
+    background: rgba(172, 204, 214, 0.326);
+    border-radius: 30px;
+    display: flex;
+}
+.bar>i{
+    height: 100%;
+    background: linear-gradient(90deg,rgba(0, 128, 0, 0.597),rgba(255, 255, 0, 0.715));
+    border-radius: 30px;
+}
+.ani{
+    position: absolute;
+    top: -350px;
+    right: -250px;
+    height: 500px;
+    width: 500px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px dashed var(--marigold);
+    animation: oval 3s infinite linear;
+}
