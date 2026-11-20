@@ -440,7 +440,7 @@ i>p{
     position: relative;
 }
 .card{
-    height: 150px;
+    height: 130px;
     width: 370px;
     max-width: 100%;
     border: 1px solid rgba(225, 219, 219, 0.3);
@@ -463,11 +463,12 @@ i>p{
     display: flex;
 }
 .card-top{
-    height: 62%;
+    height: 52%;
     align-items: center;
+    /* border: 1px solid black; */
 }
 .card-bottom{
-    height: 38%;
+    height: 48%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -492,19 +493,21 @@ i>p{
     background: rgba(172, 204, 214, 0.326);
     border-radius: 30px;
     display: flex;
+    /* flex-direction: row; */
 }
 .bar>i{
     height: 100%;
     background: linear-gradient(90deg,rgba(0, 128, 0, 0.597),rgba(255, 255, 0, 0.715));
     border-radius: 30px;
+    /* z-index: 50; */
 }
 .card-bottom>b{
     color: #fff;
 }
 .ani{
     position: absolute;
-    top: -350px;
-    right: -250px;
+    top: -400px;
+    right: -350px;
     height: 500px;
     width: 500px;
     border-radius: 50%;
@@ -518,7 +521,7 @@ i>p{
 .assignments{
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    /* align-items: stretch; */
     justify-content: center;
     gap: 30px;
     padding: clamp(48px, 7vw, 80px) clamp(16px, 5vw, 80px);
@@ -565,6 +568,19 @@ i>p{
 .assignment-card:hover .top{
     background-position: 30px 30px, 45px 45px;
 }
+.mirrr{
+    height: 65px;
+    width: 60px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.626);
+    position: absolute;
+    left: 10%;
+    bottom: -18%;
+    border-radius: 50% 50% 5px 5px;
+    display: flex;align-items: center;justify-content: center;
+    /* color: var(--cobalt); */
+    font-size: clamp(10px,1.5vw,13px);
+}
 .bottom{
     padding: 24px 28px 28px;
     line-height: 1.9;
@@ -590,10 +606,30 @@ i>p{
     background-image: url(pic.png);
     background-position: center;
     display: flex;
-    align-items: end;
-    padding: clamp(20px, 3vw, 36px);
+    /* align-items: end; */
+    /* padding: clamp(20px, 3vw, 36px); */
     color: white;
     margin-bottom: 48px;
+    overflow: hidden;
+    animation: zoom 50s infinite linear;
+    position: relative;
+}
+@keyframes zoom{
+    0%,100%{
+        background-position: 0;
+    }
+    50%{
+        background-position: 1px 1px,55px 55px;
+    }
+}
+.blur{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 40%;
+    padding: 0 0 30px 30px;
+    /* background: violet; */
+    background: linear-gradient();
 }
 .banner h1{
     font-family: var(--display);
