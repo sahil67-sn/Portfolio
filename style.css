@@ -112,6 +112,7 @@ header{
     font-weight: 600;
     border: 1px solid rgba(211, 211, 211, 0.595);
     align-items: center;
+    animation: rise 2s;
 }
 .name{
     font-family: var(--display);
@@ -119,6 +120,7 @@ header{
     font-weight: 900;
     line-height: 1.05;
     margin-top: 20px;
+    animation: rise 2s;
 }
 .batch{
     font-family: var(--display);
@@ -127,11 +129,95 @@ header{
     color: var(--cobalt);
     display: inline-block;
     margin: 10px 0 20px;
+    animation: rise 2s;
 }
 .hero .p{
     max-width: 430px;
     color: var(--muted);
     font-size: 1.1rem;
+    animation: rise 2s;
+}
+
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 28px;
+    animation: riseb 2s;
+}
+.btns>a{
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s var(--ease);
+}
+.as{
+    color: white;
+    background: var(--ink);
+    padding: 14px 30px 15px 30px;
+    border-radius: 99px;
+    border: 1px solid var(--ink);
+}
+.as:hover{
+    background: var(--cobalt);
+    transform: translate(0,-2px);
+}
+.white{
+    background: var(--white);
+    color: var(--ink);
+    padding: 14px 30px 15px 30px;
+    border-radius: 99px;
+    border: 1px solid var(--ink);
+}
+.white:hover{
+    background: var(--marigold);
+    border: 1px solid var(--marigold);
+    transform: translate(0,-2px);
+}
+.icons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+    animation: riseb 2s;
+}
+.icons a{
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid rgba(14, 27, 77, .12);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: .3s var(--ease);
+}
+.icons a:hover{
+    background: var(--cobalt);
+    color: #fff;
+    transform: translateY(-5px) rotate(-8deg);
+}
+@keyframes rise {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+
+    }
+}
+@keyframes riseb {
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+
+    }
 }
 .right{
     width: 50%;
@@ -140,6 +226,16 @@ header{
     align-items: center;
     justify-content: center;
     position: relative;
+    animation: r 2s;
+}
+@keyframes r {
+    from{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    to{
+        opacity: 1;
+    }
 }
 .oval{
     height: 85%;
@@ -165,6 +261,7 @@ header{
     position: absolute;
     top: 10%;
     right: 22%;
+    /* animation: r 5s; */
 }
 .mirror{
     height: 75%;
@@ -175,6 +272,7 @@ header{
     border: 8px solid white;
     box-shadow: 2px 2px 20px black;
     position: relative;
+    /* animation: r 5s; */
 }
 .html{
     padding: 6px 35px;
@@ -244,65 +342,6 @@ header{
     width: 100%;
     object-fit: cover;
     border-radius: 50% 50% 0 0;
-}
-.btns{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-top: 28px;
-}
-.btns>a{
-    text-decoration: none;
-    font-weight: 700;
-    transition: .3s var(--ease);
-}
-.as{
-    color: white;
-    background: var(--ink);
-    padding: 14px 30px 15px 30px;
-    border-radius: 99px;
-    border: 1px solid var(--ink);
-}
-.as:hover{
-    background: var(--cobalt);
-    transform: translate(0,-2px);
-}
-.white{
-    background: var(--white);
-    color: var(--ink);
-    padding: 14px 30px 15px 30px;
-    border-radius: 99px;
-    border: 1px solid var(--ink);
-}
-.white:hover{
-    background: var(--marigold);
-    border: 1px solid var(--marigold);
-    transform: translate(0,-2px);
-}
-.icons{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
-}
-.icons a{
-    width: 46px;
-    height: 46px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--white);
-    border: 1px solid rgba(14, 27, 77, .12);
-    font-size: 1.1rem;
-    text-decoration: none;
-    color: var(--ink);
-    transition: .3s var(--ease);
-}
-.icons a:hover{
-    background: var(--cobalt);
-    color: #fff;
-    transform: translateY(-5px) rotate(-8deg);
 }
 @keyframes pulse{
     0%,100%{
@@ -592,6 +631,36 @@ i>p{
 .bottom ul{
     margin: 8px 0 0 18px;
 }
+.assignment-all{
+    height: 80px;
+    width: 300px;
+    /* padding: 30px; */
+    /* background: green; */
+    /* background: black; */
+    display: flex;align-items: center;justify-content: center;
+    overflow: hidden;
+    /* border-radius: 50px; */
+    margin: 30px 0 0 0;
+}
+.assignment-all a{
+    /* height: 100%; */
+    width: 60%;
+    background: var(--ink);
+    font-size: clamp(20px ,3vw,20px);
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+    padding: 30px;
+    border: 1px solid rgba(173, 216, 230, 0.278);
+    display: flex;align-items: center;justify-content: center;
+    border-radius: 60px;
+    box-shadow: 0 10px 30px -18px rgba(14, 27, 77, .4);
+}
+.view:hover{
+    background: var(--cobalt);
+    color: white;
+    /* transform: translate(0,-3px); */
+}
 .contact{
     padding: 0 clamp(16px, 5vw, 80px) clamp(48px, 7vw, 90px);
 }
@@ -603,7 +672,7 @@ i>p{
     min-height: clamp(200px, 28vw, 300px);
     border-radius: 28px 28px 28px 8px;
     background: linear-gradient(120deg, var(--cobalt), var(--turquoise) 60%, var(--marigold));
-    background-image: url(pic.png);
+    background-image: url(img.png);
     background-position: center;
     display: flex;
     /* align-items: end; */
@@ -611,7 +680,7 @@ i>p{
     color: white;
     margin-bottom: 48px;
     overflow: hidden;
-    animation: zoom 50s infinite linear;
+    animation: zoom 100s infinite linear;
     position: relative;
 }
 @keyframes zoom{
@@ -619,7 +688,7 @@ i>p{
         background-position: 0;
     }
     50%{
-        background-position: 1px 1px,55px 55px;
+        background-position: 1px 1px,35px 35px;
     }
 }
 .blur{
@@ -629,7 +698,7 @@ i>p{
     height: 40%;
     padding: 0 0 30px 30px;
     /* background: violet; */
-    background: linear-gradient();
+    background: linear-gradient(rgba(0, 0, 0, 0.01) 40%,var(--ink));
 }
 .banner h1{
     font-family: var(--display);
