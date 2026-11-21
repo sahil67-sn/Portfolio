@@ -470,18 +470,15 @@ i>p{
 .cards{
     width: 100%;
     margin: auto;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     padding-top: 50px;
     position: relative;
 }
 .card{
     height: 130px;
-    width: 370px;
-    max-width: 100%;
+    width: 100%;
     border: 1px solid rgba(225, 219, 219, 0.3);
     border-radius: 30px 30px 30px 10px;
     overflow: hidden;
@@ -502,24 +499,29 @@ i>p{
     display: flex;
 }
 .card-top{
-    height: 52%;
+    height: 72%;
     align-items: center;
     /* border: 1px solid black; */
 }
 .card-bottom{
-    height: 48%;
+    height: 28%;
     align-items: center;
     justify-content: space-evenly;
 }
 .tl{
+    height: 100%;
     width: 22%;
     display: flex;
+    /* border: 1px solid black; */
     align-items: center;
     justify-content: center;
+    padding: 20px 0 0 25px ;
     transition: .35s var(--ease);
 }
 .tr{
     width: 78%;
+    margin: 10px 0 0 20px;
+    /* font-size: clamp(20px,1vw,40px); */
 }
 .tr>span{
     color: rgba(192, 191, 191, 0.708);
@@ -672,7 +674,8 @@ i>p{
     min-height: clamp(200px, 28vw, 300px);
     border-radius: 28px 28px 28px 8px;
     background: linear-gradient(120deg, var(--cobalt), var(--turquoise) 60%, var(--marigold));
-    background-image: url(img.png);
+    background-image: url(img/bca-banner.svg);
+    background-size: cover;
     background-position: center;
     display: flex;
     /* align-items: end; */
@@ -685,10 +688,10 @@ i>p{
 }
 @keyframes zoom{
     0%,100%{
-        background-position: 0;
+        background-position: 50% 50%;
     }
     50%{
-        background-position: 1px 1px,35px 35px;
+        background-position: 50.4% 50%;
     }
 }
 .blur{
@@ -834,6 +837,17 @@ footer{
 footer p{
     color: rgba(255, 255, 255, .55);
 }
+@media (max-width: 1000px) {
+    .cards{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+}
+@media (max-width: 620px) {
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}
 @media (max-width: 1024px) {
     .left{
         padding-left: clamp(16px, 5vw, 80px);
@@ -876,6 +890,9 @@ footer p{
         position: static;
         width: min(320px, 100%);
         height: 400px;
+    }
+    .banner{
+        min-height: 260px;
     }
     .contact-grid{
         flex-direction: column;
