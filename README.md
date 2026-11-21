@@ -1,63 +1,75 @@
-# Sahil Mohammad | Student Portfolio
+# Sahil Mohammad | Personal Portfolio
 
-A responsive personal portfolio website built with **HTML5** and **CSS3** as part of my BCA first-year curriculum at Dezyne Ã‰cole College, Ajmer.
+A responsive, single-page personal portfolio website built with **HTML5**, **CSS3** and Font Awesome. It showcases my skills, learning journey, assignments and contact details as a first-year BCA student.
+
+**Live assignments:** https://sahil67-sn.github.io/Assignments_/
+
+---
 
 ## About
 
-I'm Sahil Mohammad, a first-year BCA student and aspiring web developer. This portfolio showcases my skills, assignments, and contact details in a clean, modern layout.
-
-## Sections
-
-- **Home**: Introduction, quick links, and social icons
-- **About**: About me, my college, and my learning path
-- **Skills**: Skill cards with progress bars (HTML5, CSS3, JavaScript, Responsive Design, Flexbox & Grid, Git & GitHub)
-- **Assignments**: Highlights from the HTML & CSS curriculum, with a link to all assignments
-- **Contact**: Contact information and a message form
+I'm **Sahil Mohammad**, a first-year BCA student at **Dezyne École College, Ajmer**, learning to build modern, responsive websites. This project is my portfolio and also my HTML5 & CSS3 assignment project.
 
 ## Features
 
-- Fully responsive layout (desktop, tablet, mobile) using Flexbox and media queries
-- Sticky header with smooth-scroll navigation
-- CSS animations: slide-in hero, floating badges, rotating dashed rings, pulsing logo dot
-- Scrolling marquee of skills
-- Hover effects and transitions on cards, buttons, and icons
-- Sticky profile image on the About section
-- Contact form that opens the user's email app (`mailto:`)
-- Font Awesome icons
+- Sticky navigation bar with smooth scrolling between sections
+- Hero section with animated floating HTML5 / CSS3 badges and a rotating dashed orbit
+- Scrolling skills marquee
+- About section with a sticky profile image and learning path
+- Skills cards with animated-style progress bars (HTML5, CSS3, JavaScript, Responsive Design, Flexbox & Grid, Git & GitHub)
+- Assignment cards summarising key HTML & CSS projects, with a link to all assignments
+- Contact section with quick links (call, WhatsApp, email, GitHub, LinkedIn) and a contact form
+- Fully responsive layout (desktop, tablet and mobile breakpoints at 1024px, 860px and 560px)
+- Hover effects, transitions and keyframe animations throughout
+
+## Sections
+
+| Section | Description |
+|---|---|
+| Home | Intro, college, role and call-to-action buttons |
+| About | Who I am, my college and my learning path |
+| Skills | Skill cards with proficiency bars |
+| Assignments | Six highlighted assignment projects |
+| Contact | Contact details and a mail-to message form |
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (custom properties, Flexbox, keyframe animations, media queries)
-- Font Awesome 7.3.1
+- **HTML5**: semantic structure
+- **CSS3**: Flexbox, Grid concepts, custom properties (variables), media queries, animations and transitions
+- **Font Awesome 7.3.1**: icons (CDN with local fallback)
 
 ## Project Structure
 
 ```
 .
-â”œâ”€â”€ index.html      # Page structure and content
-â”œâ”€â”€ style.css       # All styling and animations
-â”œâ”€â”€ img.png         # Profile image
-â””â”€â”€ fontawesome-free-7.3.1-web/   # Local Font Awesome files
+├── index.html      # Main page markup
+├── style.css       # All styles, animations and responsive rules
+├── img.png         # Profile image (hero, about and contact banner)
+├── fontawesome-free-7.3.1-web/   # Local Font Awesome fallback
+└── README.md
 ```
 
 ## Getting Started
 
-1. Clone or download this repository:
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/sahil67-sn/Portfolio.git
+   git clone https://github.com/sahil67-sn/<your-repo-name>.git
    ```
-2. Open the project folder.
-3. Open `index.html` in any modern web browser.
+2. **Open the project folder**
+   ```bash
+   cd <your-repo-name>
+   ```
+3. **Run it**: just open `index.html` in any modern browser. No build step or dependencies needed.
 
-No build tools or installation required.
+> Tip: use the VS Code **Live Server** extension for auto-reload while editing.
 
-## Customization
+## Customisation
 
-Colors and fonts are defined as CSS variables at the top of `style.css`:
+Colors and fonts are controlled by CSS variables at the top of `style.css`:
 
 ```css
 :root {
+    --paper: #F4F7FF;
     --ink: #0E1B4D;
     --cobalt: #1E40D8;
     --turquoise: #0E9F9A;
@@ -65,19 +77,20 @@ Colors and fonts are defined as CSS variables at the top of `style.css`:
 }
 ```
 
-Change these values to restyle the whole site. To update the profile photo, replace `img.png` with your own image (same file name).
-
-## Links
-
-- Assignments: https://sahil67-sn.github.io/Assignments_/
-- GitHub: https://github.com/sahil67-sn
+Change these values to re-theme the whole site.
 
 ## Contact
 
-- Email: sahilhere6767@gmail.com
-- Location: Ajmer, Rajasthan, India
-- College: Dezyne Ã‰cole College, Ajmer
+- **Phone:** +91 96604 32565
+- **Email:** sahilhere6767@gmail.com
+- **WhatsApp:** https://wa.me/919660432565
+- **GitHub:** https://github.com/sahil67-sn
+- **Location:** Ajmer, Rajasthan, India
+
+## License
+
+This project was created for educational purposes as part of the BCA curriculum. Feel free to use it as inspiration, but please don't present it as your own work.
 
 ---
 
-Â© 2026 Sahil Mohammad | BCA First Year | HTML5 & CSS3 Assignment Project
+© 2026 Sahil Mohammad | Dezyne École College
