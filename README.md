@@ -2,6 +2,7 @@
 
 A responsive, single-page personal portfolio website built with **HTML5**, **CSS3** and Font Awesome. It showcases my skills, learning journey, assignments and contact details as a first-year BCA student.
 
+🔗 **Live Website:** [View Assignments](https://sahil67-sn.github.io/Portfolio/)
 **Live assignments:** https://sahil67-sn.github.io/Assignments_/
 
 ---
