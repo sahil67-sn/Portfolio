@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            padding: 10px;
+        }
+        .con{
+            height: 95vh;
+            /* border: 3px solid black; */
+            display: flex;
+        }
+        .box{
+            width: 25%;
+            /* height: 33%; */
+            /* border: 1px solid black; */
+        }
+        img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            padding: 10px;
+            border-radius: 20px;
+            /* height: 100%; */
+
+        }
+        img:hover{
+            transform: scale(1.09999);
+            border-radius: 20px;
+        }
+        @media (max-width:960px) {
+            .con{
+                flex-wrap: wrap;
+            }
+            .box{
+                width: 50%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Gallery</h1>
+    <div class="con">
+        <div class="box">
+            <img src="img/image1.png" alt="">
+            <img src="img/image5.png" alt="">
+            <img src="img/image3.png" alt="">
+            <img src="img/image7.png" alt="">
+        </div>
+        <div class="box">
+            <img src="img/image4.png" alt="">
+            <img src="img/image8.png" alt="">
+            <img src="img/image2.png" alt="">
+            <img src="img/image6.png" alt="">
+        </div>
+        <div class="box">
+            <img src="img/image1.png" alt="">
+            <img src="img/image3.png" alt="">
+            <img src="img/image7.png" alt="">
+            <img src="img/image5.png" alt="">
+        </div>
+        <div class="box">
+            <img src="img/image8.png" alt="">
+            <img src="img/image2.png" alt="">
+            <img src="img/image6.png" alt="">
+            <img src="img/image4.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

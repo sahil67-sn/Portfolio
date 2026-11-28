@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Frame</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .con{
+            height: 93vh;
+            /* border: 2px solid black; */
+            display: flex;
+        }
+        h1{
+            height: 7vh;
+            text-align: center;
+            line-height: 2;
+        }
+        .left{
+            height: 100%;
+            width: 25%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;    
+            overflow-y: auto;
+        }
+        .right{
+            height: 100%;
+            width: 75%;
+            border: 1px solid black;
+        }
+        a{
+            width: 90%;
+            /* border: 1px solid black; */
+            text-decoration: none;
+            flex: 0 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 99px;
+            background: navy;
+            color: white;
+            font-size: clamp(.4rem,2vw,1rem);
+        }
+        @media (max-width:600px) {
+            .con{
+                flex-direction: column;
+            }
+            .left{
+                width: 100%;
+                height: 20%;
+                flex-direction: row;
+                gap: 3%;
+            }
+            a{
+                flex: 0 0 40px;
+                padding: 10px 20px;
+                white-space: nowrap;
+            }
+            .right{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>I-Frame</h1>
+    <div class="con">
+        <div class="left">
+                <a href="bg-image.html" target="sahil">Assignment-1</a>
+                <a href="news-page.html" target="sahil">Assignment-2</a>
+                <a href="flexbox.html" target="sahil">Assignment-3</a>
+                <a href="d-gallery.html" target="sahil">Assignment-4</a>
+                <a href="profile.html" target="sahil">Assignment-5</a>
+                <a href="home.html" target="sahil">Assignment-6</a>
+                <a href="i-frame.html" target="sahil">Assignment-7</a>
+                <a href="table.html" target="sahil">Assignment-8</a>
+                <a href="box-ploting.html" target="sahil">Assignment-9</a>
+                <a href="signup.html" target="sahil">Assignment-10</a>
+                <a href="animation.html" target="sahil">Assignment-11</a>
+        </div>
+        <iframe src="hero.html" frameborder="0" class="right" height="100%" width="100%" name="sahil"></iframe>
+    </div>
+</body>
+</html>

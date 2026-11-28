@@ -1,0 +1,161 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+
+        body{
+            background: radial-gradient(rgb(209, 121, 121),brown);
+            /* background: radial-gradient(135deg,brown,rgba(165, 42, 42, 0.342)); */
+        }
+        .con{
+            height: 100vh;
+            display: flex;align-items: center;justify-content: center;
+            border: 1px dashed white;
+        }
+        .box{
+            height:100%;width: 100%;
+            /* border: 1px dashed black; */
+        }
+        .header{
+            height: 15%;
+            /* border: 1px dashed rgb(249, 245, 245); */
+            display: flex;align-items: center;justify-content: center;color: white;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+        }
+        .header h1{
+            font-size: clamp(30px,5vw,60px);
+            color: goldenrod;
+        }
+        .center{
+            height: 75%;
+            border: 1px dashed white;
+            display: flex;
+            background: rgba(255, 255, 255, 0.096);
+        }
+        .left{
+            /* background: white; */
+            /* border: 10px dashed brown; */
+            height: 70%;
+            width: 20%;
+            /* border: 1px dashed black; */
+            display: flex;flex-direction: column;align-items: center;justify-content: space-around;
+        }
+        .left a{
+            text-decoration: none;
+            color: white;
+            border-bottom: 5px solid burlywood;
+            padding: 10px 40px;border-radius: 99px;
+            font-weight: 600;font-size: clamp(20px,1vw,40px);
+        }
+        .c{
+            height: 100%;width: 60%;
+            border-left: 1px dashed rgb(250, 246, 246);
+            border-right: 1px dashed rgb(247, 243, 243);
+            display: flex;align-items: center;justify-content: center;
+        }
+        .c h1{
+            position: absolute;
+            font-size: clamp(30px,5vw,60px);
+            color: white;
+            opacity: .15;
+            z-index: -1;
+        }
+        .right{
+            height: 100%;width: 20%;
+            /* border: 1px dashed black; */
+            text-align: center;   
+            /* padding: 10px; */
+            color: white;
+            line-height: 2;
+        }
+        .right>p{
+            font-size: 25px;
+        }
+        .right>ul{
+            padding-left: 60px;
+            text-align: left;
+        }
+        .footer{
+            height: 10%;
+            width: 90%;
+            margin: auto;
+            /* border: 1px dashed rgb(248, 245, 245); */
+            display: flex;
+            align-items: center;justify-content: space-evenly;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .footer .id{
+            font-size: clamp(20px,2.1vw,40px);
+            color: white;
+            font-weight: 900;
+        }
+        .footer .icon{
+            /* background: white; */
+            display: flex;
+            gap: 50px;
+        }
+        .icon a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <section class="con">
+            <div class="box">
+                <div class="header"><h1>PUSHKAR</h1></div>
+                <div class="center">
+                    <div class="left">
+                        <a href="home.html" target="if">Home</a>
+                        <a href="about.html"target="if">About</a>
+                        <a href="temple.html"target="if">Temples</a>
+                        <a href="fair.html"target="if">Pushkar Fair</a>
+                        <a href="contact.html"target="if">Contact</a>
+                    </div>
+                    <div class="c">
+                        <h1>Pushkar Fair</h1>
+                        <iframe src="" frameborder="0" name="if" height="100%" width="100%"></iframe>
+                    </div>
+                    <div class="right">
+                        <h1>Where??</h1>
+
+                        <p>Located at Ajmer,<br> Rajasthan</p>
+                        <h1>How to Reach??</h1>
+                        <ul>
+                            <li>By Bus</li>
+                            <li>By Train</li>
+                            <li>By Air</li>
+                            <li>By Bike</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="id">
+                        <a href="">@Pushkar.raj2026</a>
+                    </div>
+                    <div class="icon">
+                        <a href="" class="fab fa-facebook fa-2x"></a>
+                        <a href="" class="fab fa-x fa-2x"></a>
+                        <a href="" class="fab fa-linkedin fa-2x"></a>
+                        <a href="" class="fab fa-instagram fa-2x"></a>
+                        <a href="" class="fab fa-youtube fa-2x"></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
